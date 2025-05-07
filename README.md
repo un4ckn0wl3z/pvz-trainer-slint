@@ -20,7 +20,7 @@ A modern +4 trainer for **Plants vs. Zombies**, rewritten with [Slint UI](https:
 ## 🛠️ How to Build
 
 ```bash
-git clone https://github.com/yourusername/pvz-trainer-slint.git
+git clone https://github.com/un4ckn0wl3z/pvz-trainer-slint.git
 cd pvz-trainer-slint
 cargo build --release
 ```
