@@ -15,7 +15,7 @@ A modern +4 trainer for **Plants vs. Zombies**, rewritten with [Slint UI](https:
 ## 🖥️ Built With
 
 - [Slint](https://slint.dev) – UI toolkit for building native GUIs in Rust, C++, and more
-- 🦀 Rust (or C++) – language used for memory editing (depending on your implementation)
+- 🦀 Rust – language used for memory editing (depending on your implementation)
 
 ## 🛠️ How to Build
 
