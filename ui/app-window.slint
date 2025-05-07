@@ -1,0 +1,136 @@
+import { Button, VerticalBox, Switch, Slider, HorizontalBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+
+    callback activate-auto-sun-collect(bool);
+    callback activate-no-plants-cooldown(bool);
+    callback change-sun-value(int);
+    callback change-coins-value(int);
+    callback visit-develop-github();
+
+    width: 350px;
+    height: 550px;
+    full-screen: false;
+    title: "PVZ +4 Trainer (Slint) by un4";
+
+    VerticalBox {
+
+        Rectangle {
+            background: #b8ff1e;
+            Text {
+                text: "Plants Vs. Zombies +4 Trainer";
+                font-size: 24px;            
+            }
+        }
+
+        HorizontalBox {
+            alignment: center;
+            Text {
+                text: "Plants Vs. Zombies +4 Trainer re-written in Slint";
+                font-size: 15px;
+                color: #0098ea;
+                stroke: #00fa3e;
+            }
+    
+        }
+        Rectangle {
+            background: black;
+            height: 1px;
+        }
+
+        HorizontalBox {
+            alignment: center;
+            Image {
+                source: @image-url("../assets/banner.jpg");
+                
+            }
+        }
+
+        Rectangle {
+            background: black;
+            height: 1px;
+        }
+
+        VerticalBox {
+            HorizontalBox {
+                alignment: start;
+                astg := Switch {
+                    checked: false;
+                    toggled => {
+                        root.activate-auto-sun-collect(astg.checked);
+                    }
+                    
+                }
+                Text {
+                    text: "Auto sun collect";
+                    font-size: 15px;
+                }
+
+            }
+            HorizontalBox {
+                alignment: start;
+                actg := Switch {
+                    checked: false;
+                    toggled => {
+                        root.activate-no-plants-cooldown(actg.checked);
+                    }
+                }
+                Text {
+                    text: "No plants cooldown";
+                    font-size: 15px;
+                }
+
+            }
+            HorizontalBox {
+                Text {
+                    text: "Sun Value";
+                    font-size: 15px;
+                }
+                Slider {
+                    minimum: 0;
+                    maximum: 99999;
+                    value: 0;
+                    changed(value) => {
+                        root.change-sun-value(value);
+                    }
+                }
+            }
+            HorizontalBox {
+                
+                Text {
+                    text: "Coins Value";
+                    font-size: 15px;
+                }
+                Slider {
+                    minimum: 0;
+                    maximum: 99999;
+                    value: 0;
+                    changed(value) => {
+                        root.change-coins-value(value);
+                    }
+                }
+            }
+
+            Rectangle {
+                background: black;
+                height: 1px;
+            }
+            HorizontalLayout {
+                alignment: end;
+                TouchArea {
+                    mouse-cursor: pointer;
+                    clicked => {
+                        root.visit-develop-github();
+                    }
+                    Text {
+                        text: "Made by un4ckn0wl3z";
+                        font-size: 15px;
+                        color: #0098ea;
+                        stroke: #00fa3e;
+                    }
+                }
+   
+            }
+        }
+    }
+}
