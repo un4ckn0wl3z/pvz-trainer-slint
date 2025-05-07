@@ -26,7 +26,7 @@ cargo build --release
 ```
 
 ## 🚀 How to Use
-- Launch Plants vs. Zombies (tested on version X.X.X)
+- Launch Plants vs. Zombies (tested on version 1.2.0.1073)
 - Run the pvz-trainer-slint executable
 - Use the GUI to activate hacks
 - Enjoy dominating the zombie hordes!
