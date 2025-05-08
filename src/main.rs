@@ -107,7 +107,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     {
-        ui.on_visit_develop_github(move || {
+        ui.on_visit_developer_github(move || {
             open::that("https://github.com/un4ckn0wl3z").unwrap();
         });
     }

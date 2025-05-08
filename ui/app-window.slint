@@ -6,7 +6,7 @@ export component AppWindow inherits Window {
     callback activate-no-plants-cooldown(bool);
     callback change-sun-value(int);
     callback change-coins-value(int);
-    callback visit-develop-github();
+    callback visit-developer-github();
 
     width: 350px;
     height: 550px;
@@ -120,7 +120,7 @@ export component AppWindow inherits Window {
                 TouchArea {
                     mouse-cursor: pointer;
                     clicked => {
-                        root.visit-develop-github();
+                        root.visit-developer-github();
                     }
                     Text {
                         text: "Made by un4ckn0wl3z";
